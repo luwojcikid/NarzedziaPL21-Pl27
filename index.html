@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zbiór narzedzi z PL27</title>
+    <link rel="stylesheets" href="style.css" type="text/css">
+    <style>
+
+        body{
+            height: 100%;
+            background-color: azure;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90Y4kBxsqTxwQNWw6yO3tyWz7rp4IJC0q3UWv7GegVVz2xQSUANj4Y7Az&s=10 );
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+
+        }
+
+        h3{
+            font-size: 26px;
+        }
+        .kafelki{
+            display: none;
+            border: 19px;
+            border-radius: 18px;
+            border-bottom: 20px;
+            text-align: center;
+            color: black;
+            font-size: 20px;
+            
+            
+
+
+
+        }
+        .wybor_mag{
+            text-align: center;
+            display: block;
+
+           
+
+        }
+        button{
+            border-radius: 12px;
+            font-size: 22px;
+
+        }
+
+
+
+        .kafelki.active {
+            display: block;
+        }
+        
+        p{ display: block;
+            color: black;
+
+        }
+        footer{
+            margin-top: auto;
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+        .content{
+            flex: 1;
+
+        }
+        h3{
+            text-align: center;
+            color: white;
+            
+        }
+
+        button:hover{
+            background-color: lightskyblue;
+            transform: translateY(-5px);
+
+        }
+        .zawartosc{
+            display: block;
+            border: 3px solid;
+            border-radius: 15px;
+            padding: 4px;
+            margin: 5px auto;
+            max-width: 350px;
+            transition: all 0,2s ease;
+
+        }
+        .zawartosc:hover{
+            background-color: lightblue;
+            transform: translateY(-5px);
+
+        }
+        
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="content"></div>
+    <h3> Zestaw narzędzi  </h3>
+    <div class="wybor_mag">
+<button  class="btnPL21" onclick="PL21_pokaz()">Magazyn PL21</button>
+<button  class="btnPL27" onclick="PL27_pokaz()">Magazyn PL27</button>
+
+    </div>
+    <br>
+
+
+
+<!-- dla PL27-->
+    <div id="pl27" class="kafelki">
+
+        <a href="https://luwojcikid.github.io/PL27_kalkulator_kontenery/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Kontenery Kalkulator</p>
+        </a>
+     <a href="https://luwojcikid.github.io/PL27/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Konwerter Raport SAP- Produktywność</p>
+        </a>
+    
+        <a href="https://luwojcikid.github.io/PL21-27_Generator_brak_odbic_RCP/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Generator braku odbić ADP/ABRA </p>
+        </a>
+        <a href="http://pl27audyty.infinityfreeapp.com/auth/login.php?i=1" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Audytowanie regałów </p>
+        </a>
+
+
+    </div>
+
+
+    <!-- dla PL21-->
+    <div id="pl21" class="kafelki">
+
+        <a href="https://luwojcikid.github.io/PL21_Planner/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Planowanie prio dla Nolimit</p>
+        </a>
+     <a href="https://luwojcikid.github.io/Rybka/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Diagram Rybki</p>
+        </a>
+    
+        <a href="https://luwojcikid.github.io/PL21-27_Generator_brak_odbic_RCP/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>Generator braku odbić ADP/ABRA </p>
+        </a>
+
+          <a href="https://luwojcikid.github.io/PL21-27_Generator_brak_odbic_RCP/" class="zawartosc" style="text-decoration: none; color: inherit; display: block;">
+            <p>REPL-Analyse </p>
+        </a>
+
+
+
+    </div>
+
+    </div>
+
+    
+
+
+    <footer class="stopka">
+        Twórca :Wójcik Łukasz kontakt luwojcik@idlogistics.com 
+    </footer>
+    <script>
+        function PL21_pokaz(){
+            document.getElementById("pl21").classList.add('active');
+            document.getElementById("pl27").classList.remove('active')
+        }
+        function PL27_pokaz(){
+            document.getElementById("pl27").classList.add('active');
+            document.getElementById("pl21").classList.remove('active')
+            
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>
